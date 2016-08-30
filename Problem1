@@ -1,0 +1,13 @@
+#include <iostream>
+#include <string>
+
+int main()
+{
+  long SUMT=0;
+  for(int x=0;x<1000;x++){
+      if(x%3 == 0 || x%5 == 0){
+          SUMT=SUMT+x;
+      }
+  }
+  std::cout << "Sum of multiples of 3 and 5 below 1000 is " << SUMT << "!\n";
+}
