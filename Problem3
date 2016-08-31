@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int flag = 0;
+    long number = 0;
+    long pro = 0;
+    long div = 0;
+    cout << "Please enter a number ";
+    cin >> number;
+    pro = number;
+    div = pro - 1;
+    while(flag != 2){
+        flag = 0;
+        while((div > 1) && (flag != 1)){
+            if(pro%div == 0){
+                flag = 1;
+            }else{
+                flag = 2;
+            }
+            div -= 1;
+        }
+        if(flag != 2){
+            pro -= 1;
+            div = pro - 1;
+        }else if(number%pro != 0){
+            flag = 0;
+        }
+    }
+    std::cout << "Largest prime factor: " << pro;
+}
