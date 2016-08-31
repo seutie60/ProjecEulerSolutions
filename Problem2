@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+
+int main()
+{
+  long SUMT=0;
+  long fibopp = 0;
+  long fibop = 1;
+  long fibo = 0;
+  while((fibopp + fibop) <= 4000000){
+      fibo = fibopp + fibop;
+      fibopp = fibop;
+      fibop = fibo;
+      //std::cout << fibo << " ";
+      if(fibo%2 == 0){
+          SUMT += fibo;
+      }
+  }
+  std::cout << "     Sum of the even-valued terms: " << SUMT;
+}
